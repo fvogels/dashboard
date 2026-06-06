@@ -6,11 +6,18 @@ import { viteSingleFile } from "vite-plugin-singlefile"
 
 
 // https://vite.dev/config/
-export default defineConfig({
-  plugins: [
-    react(),
-    babel({ presets: [reactCompilerPreset()] }),
-    tsconfigPaths(),
-    viteSingleFile(),
-  ],
+export default defineConfig((configuration) => {
+    const mode = configuration.mode || 'home';
+
+    return {
+        plugins: [
+            react(),
+            babel({ presets: [reactCompilerPreset()] }),
+            tsconfigPaths(),
+            viteSingleFile(),
+        ],
+        define: {
+            'DASHBOARD': JSON.stringify(mode),
+        }
+    }
 })
