@@ -24,10 +24,6 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
-  @media (max-width: 1024px) {
-    font-size: 16px;
-  }
 }
 
 @media (prefers-color-scheme: dark) {
@@ -52,7 +48,7 @@
 
 #root {
   /* width: 1126px; */
-  /* padding: 1em; */
+  padding: 1em;
   max-width: 100%;
   margin: 0 auto;
   border-inline: 1px solid var(--border);

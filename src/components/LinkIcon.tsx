@@ -36,7 +36,9 @@ export default function LinkIcon(props: Props): React.ReactNode
         <UnstyledButton variant="default" bg={props.backgroundColor} className={classes.button} onClick={navigateToUrl} style={{width: '128px', height: '128px'}}>
             <Flex direction="column" justify='flex-start' align='stretch' gap='sm'>
                 <Flex direction="row" justify='center'>
-                    <props.icon size="64" color={props.foregroundColor} />
+                    <div style={({width: '64px', height: '64px'})} className={classes.iconContainer}>
+                        <props.icon size={"64px"} color={props.foregroundColor} />
+                    </div>
                 </Flex>
                 <Text className={classes.caption} c={props.foregroundColor}>
                     {determineCaption()}

@@ -1,4 +1,5 @@
-import { Card, Title } from "@mantine/core";
+import { Flex, Text } from "@mantine/core";
+import classes from './LinkGroup.module.css';
 
 
 interface Props extends React.PropsWithChildren
@@ -9,13 +10,13 @@ interface Props extends React.PropsWithChildren
 export default function LinkGroup(props: Props): React.ReactNode
 {
     return (
-        <Card withBorder={true} shadow='md' m='xl'>
-            <Card.Section>
-                <Title m='lg'>
+        <div className={classes.container}>
+            <Flex direction='column'>
+                <Text className={classes.caption}>
                     {props.caption}
-                </Title>
-            </Card.Section>
-            {props.children}
-        </Card>
+                </Text>
+                {props.children}
+            </Flex>
+        </div>
     )
 }

@@ -1,0 +1,12 @@
+.container {
+    background: #333;
+    padding: 0.2em 1em 1em 1em;
+    border-radius: 1em;
+    margin-bottom: 1em;
+}
+
+.caption {
+    /* border-botto   m: 1px solid white; */
+    font-size: 150%;
+    font-variant: small-caps;
+}
