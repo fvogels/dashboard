@@ -20,5 +20,8 @@ export default defineConfig((configuration) => {
         resolve: {
             tsconfigPaths: true,
         },
+        build: {
+            outDir: `./dist/${mode}`,
+        },
     }
 })
