@@ -2,7 +2,7 @@ import './App.css'
 import '@mantine/core/styles.css';
 import { Center, Flex, MantineProvider } from '@mantine/core';
 import LinkIcon from '@/components/LinkIcon';
-import { IconBrandAmazon, IconBrandApple, IconBrandDisney, IconBrandHbo, IconBrandNetflix, IconBrandReddit, IconBrandYoutube, IconBrandZalando, IconCalendar, IconCloud, IconLetterY, IconListCheck, IconMail, IconMovie, IconPencil } from '@tabler/icons-react';
+import { IconBrandAmazon, IconBrandApple, IconBrandAws, IconBrandDisney, IconBrandHbo, IconBrandNetflix, IconBrandReddit, IconBrandYoutube, IconBrandZalando, IconCalendar, IconCloud, IconLetterY, IconListCheck, IconMail, IconMovie, IconPencil } from '@tabler/icons-react';
 import { useHotkeys, useToggle } from '@mantine/hooks';
 import LinkGroup from '@/components/LinkGroup';
 import IconDeStandaard from './components/IconDeStandaard';
@@ -19,6 +19,8 @@ import IconJustWatch from './components/IconJustWatch';
 import IconClaude from './components/IconClaude';
 import IconGemini from './components/IconGemini';
 import IconChatGpt from './components/IconChatGpt';
+import IconBitwarden from './components/IconBitwarden';
+import IconRaindrop from './components/IconRaindrop';
 
 function App() {
     const [ showShortcuts, toggleShowShortcuts ] = useToggle([false, true]);
@@ -92,6 +94,13 @@ function App() {
                                 <LinkIcon url='https://chatgpt.com/' backgroundColor='cyan'  name='ChatGPT' icon={IconChatGpt} />
                                 <LinkIcon url='https://gemini.google.com/' backgroundColor='white' foregroundColor='black' name='Gemini' icon={IconGemini} />
                                 <LinkIcon url='https://claude.ai/' backgroundColor='#FF0' foregroundColor='black' name='Claude' icon={IconClaude} />
+                            </Flex>
+                        </LinkGroup>
+                        <LinkGroup caption='Util'>
+                            <Flex gap='xs'>
+                                <LinkIcon url='https://vault.bitwarden.com/' backgroundColor='#005'  name='Bitwarden' icon={IconBitwarden} />
+                                <LinkIcon url='https://app.raindrop.io/my/0' backgroundColor='white' foregroundColor='black' name='Raindrop' icon={IconRaindrop} />
+                                <LinkIcon url='https://aws.amazon.com/console/' backgroundColor='#FEBD69' foregroundColor='black' name='Raindrop' icon={IconBrandAws} />
                             </Flex>
                         </LinkGroup>
                     </Flex>
