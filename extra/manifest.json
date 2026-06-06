@@ -1,0 +1,9 @@
+{
+  "name": "My New Tab Dashboard",
+  "version": "1.0",
+  "description": "Loads my local index.html on every new tab.",
+  "manifest_version": 3,
+  "chrome_url_overrides": {
+    "newtab": "index.html"
+  }
+}
