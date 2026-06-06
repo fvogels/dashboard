@@ -50,11 +50,11 @@ export default function LinkIcon(props: Props): React.ReactNode
 
     function onMouseDown(event: React.MouseEvent)
     {
-        if ( event.button === 0 )
+        if ( event.button === 0 && !event.ctrlKey )
         {
             navigateToUrl();
         }
-        else if ( event.button === 1 )
+        else if ( (event.button === 0 && event.ctrlKey) || event.button === 1 )
         {
             navigateToUrlInNewTab()
         }
