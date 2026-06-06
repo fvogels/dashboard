@@ -28,7 +28,7 @@ interface Props
 export default function HomeDashboard({showShortcuts}: Props): React.ReactNode
 {
     return (
-        <Flex gap='1em' justify='space-evenly' wrap='wrap'>
+        <Flex gap='1em' justify='flex-start' wrap='wrap' direction="column" h='90vh'>
             <LinkGroup caption='Google'>
                 <Flex gap='xs'>
                     <LinkIcon url='https://mail.google.com' backgroundColor='blue' shortcut="m" name='Mail' icon={IconMail} showShortcut={showShortcuts} />
@@ -50,18 +50,18 @@ export default function HomeDashboard({showShortcuts}: Props): React.ReactNode
             </LinkGroup>
             <LinkGroup caption='Social'>
                 <Flex gap='xs'>
-                    <LinkIcon url='https://www.reddit.com/' backgroundColor='#FF5700'  name='Reddit' icon={IconBrandReddit} />
-                    <LinkIcon url='https://www.standaard.be/' backgroundColor='#D90000' name='De Standaard' icon={IconDeStandaard} />
-                    <LinkIcon url='https://news.ycombinator.com/' backgroundColor='#FF5A00' name='Hacker News' icon={IconLetterY} />
+                    <LinkIcon url='https://www.reddit.com/' backgroundColor='#600'  name='Reddit' icon={IconBrandReddit} />
+                    <LinkIcon url='https://www.standaard.be/' backgroundColor='#A00' name='De Standaard' icon={IconDeStandaard} />
+                    <LinkIcon url='https://news.ycombinator.com/' backgroundColor='#A50' name='Hacker News' icon={IconLetterY} />
                     <LinkIcon url='https://arstechnica.com/' backgroundColor='white' foregroundColor='black' name='Ars Technica' icon={IconArsTechnica} />
                     <LinkIcon url='https://www.quantamagazine.org/' backgroundColor='#FFBB00' foregroundColor='black' name='Quantamagazine' icon={IconQuantaMagazine} />
                     <LinkIcon url='https://www.scientificamerican.com/' backgroundColor='#A4D8EF' foregroundColor='black' name='Scientific American' icon={IconScientificAmerican} />
-                    <LinkIcon url='https://phys.org/' backgroundColor='#999' foregroundColor='black' name='phys.org' icon={IconPhysOrg} />
+                    <LinkIcon url='https://phys.org/' backgroundColor='#666' foregroundColor='black' name='phys.org' icon={IconPhysOrg} />
                 </Flex>
             </LinkGroup>
             <LinkGroup caption='Shopping'>
                 <Flex gap='xs'>
-                    <LinkIcon url='https://www.zalando.be/' backgroundColor='#FF4C00' name='Zalando' icon={IconBrandZalando} />
+                    <LinkIcon url='https://www.zalando.be/' backgroundColor='#A40' name='Zalando' icon={IconBrandZalando} />
                     <LinkIcon url='https://www.amazon.com.be/' backgroundColor='#FEBD69' foregroundColor='black' name='Amazon BE' icon={IconBrandAmazon} />
                     <LinkIcon url='https://www.amazon.fr/' backgroundColor='#FEBD69' foregroundColor='black' name='Amazon FR' icon={IconBrandAmazon} />
                     <LinkIcon url='https://www.delhaize.be/' backgroundColor='white' foregroundColor='black' name='Delhaize' icon={IconDelhaize} />
@@ -69,7 +69,7 @@ export default function HomeDashboard({showShortcuts}: Props): React.ReactNode
             </LinkGroup>
             <LinkGroup caption='Coding'>
                 <Flex gap='xs'>
-                    <LinkIcon url='https://exercism.org/' backgroundColor='#0092A1'  name='Exercism' icon={IconExercism} />
+                    <LinkIcon url='https://exercism.org/' backgroundColor='#0092A1' foregroundColor='black' name='Exercism' icon={IconExercism} />
                     <LinkIcon url='https://www.codewars.com/' backgroundColor='#600' foregroundColor='white' name='Codewars' icon={IconCodewars} />
                     <LinkIcon url='https://leetcode.com/' backgroundColor='white' foregroundColor='black' name='LeetCode' icon={IconLeetCode} />
                 </Flex>
