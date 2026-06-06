@@ -20,6 +20,5 @@ export default defineConfig((configuration) => {
         resolve: {
             tsconfigPaths: true,
         },
-        envDir: "./environments",
     }
 })
