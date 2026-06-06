@@ -33,17 +33,19 @@ export default function LinkIcon(props: Props): React.ReactNode
     useHotkeys(hotkeys)
 
     return (
-        <UnstyledButton variant="default" bg={props.backgroundColor} className={classes.button} onMouseDown={onMouseDown} style={{width: '128px', height: '128px'}}>
-            <Flex direction="column" justify='flex-start' align='stretch' gap='sm'>
-                <Flex direction="row" justify='center'>
-                    <div style={({width: '64px', height: '64px'})} className={classes.iconContainer}>
-                        <props.icon size={"64px"} color={props.foregroundColor} />
-                    </div>
+        <UnstyledButton variant="default" bg={props.backgroundColor} className={classes.button} onMouseDown={onMouseDown}>
+            <div className={classes.container}>
+                <Flex direction="column" justify='center' align='stretch' gap='sm' className={classes.stacker}>
+                    <Flex direction="row" justify='center'>
+                        <div style={({width: '64px', height: '64px'})} className={classes.iconContainer}>
+                            <props.icon size={"64px"} color={props.foregroundColor} />
+                        </div>
+                    </Flex>
+                    <Text className={classes.caption} c={props.foregroundColor}>
+                        {determineCaption()}
+                    </Text>
                 </Flex>
-                <Text className={classes.caption} c={props.foregroundColor}>
-                    {determineCaption()}
-                </Text>
-            </Flex>
+            </div>
         </UnstyledButton>
     )
 
