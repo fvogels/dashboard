@@ -1,23 +1,23 @@
-import { Flex } from '@mantine/core';
-import LinkIcon from '@/components/LinkIcon';
-import { IconBrandAmazon, IconBrandApple, IconBrandAws, IconBrandDisney, IconBrandHbo, IconBrandNetflix, IconBrandReddit, IconBrandYoutube, IconBrandZalando, IconCalendar, IconCloud, IconClubs, IconLetterY, IconListCheck, IconMail, IconMovie, IconPencil } from '@tabler/icons-react';
-import LinkGroup from '@/components/LinkGroup';
-import IconDeStandaard from '@/components/IconDeStandaard';
 import IconArsTechnica from '@/components/IconArsTechnica';
-import IconQuantaMagazine from '@/components/IconQuantaMagazine';
-import IconScientificAmerican from '@/components/IconScientificAmerican';
-import IconPhysOrg from '@/components/IconPhysOrg';
+import IconBitwarden from '@/components/IconBitwarden';
+import IconChatGpt from '@/components/IconChatGpt';
+import IconClaude from '@/components/IconClaude';
+import IconCodewars from '@/components/IconCodewars';
 import IconDelhaize from '@/components/IconDelhaize';
-import IconLeetCode from '@/components/IconLeetcode';
-import IconCodewars from '@/components/IconCodeWars';
+import IconDeStandaard from '@/components/IconDeStandaard';
 import IconExercism from '@/components/IconExercism';
+import IconGemini from '@/components/IconGemini';
 import IconImdb from '@/components/IconImdb';
 import IconJustWatch from '@/components/IconJustWatch';
-import IconClaude from '@/components/IconClaude';
-import IconGemini from '@/components/IconGemini';
-import IconChatGpt from '@/components/IconChatGpt';
-import IconBitwarden from '@/components/IconBitwarden';
+import IconLeetCode from '@/components/IconLeetCode';
+import IconPhysOrg from '@/components/IconPhysOrg';
+import IconQuantaMagazine from '@/components/IconQuantaMagazine';
 import IconRaindrop from '@/components/IconRaindrop';
+import IconScientificAmerican from '@/components/IconScientificAmerican';
+import LinkGroup from '@/components/LinkGroup';
+import LinkIcon from '@/components/LinkIcon';
+import { Flex } from '@mantine/core';
+import { IconBrandAmazon, IconBrandApple, IconBrandAws, IconBrandDisney, IconBrandHbo, IconBrandNetflix, IconBrandReddit, IconBrandYoutube, IconBrandZalando, IconCalendar, IconChess, IconCloud, IconClubs, IconLetterY, IconListCheck, IconMail, IconMovie, IconPencil } from '@tabler/icons-react';
 
 
 interface Props
@@ -98,6 +98,7 @@ export default function HomeDashboard({showShortcuts}: Props): React.ReactNode
             <LinkGroup caption='Fun'>
                 <Flex gap='xs'>
                     <LinkIcon url='https://cardgames.io/' backgroundColor='#005'  name='Cardgames.io' icon={IconClubs} />
+                    <LinkIcon url='https://lichess.org/' backgroundColor='white' foregroundColor='black'  name='Lichess' icon={IconChess} />
                 </Flex>
             </LinkGroup>
        </Flex>

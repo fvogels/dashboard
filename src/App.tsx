@@ -19,7 +19,7 @@ function App() {
         <>
             <MantineProvider defaultColorScheme='dark'>
                 <Center h='100vh' w='100vw'>
-                    <HomeDashboard showShortcuts={showShortcuts} />
+                    {dashboard()}
                 </Center>
             </MantineProvider>
         </>
@@ -28,6 +28,9 @@ function App() {
 
     function dashboard(): React.ReactNode
     {
+        console.log(import.meta.env);
+        console.log(DASHBOARD);
+
         switch ( DASHBOARD )
         {
             case 'home':
