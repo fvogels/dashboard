@@ -33,7 +33,7 @@ export default function LinkIcon(props: Props): React.ReactNode
     useHotkeys(hotkeys)
 
     return (
-        <UnstyledButton variant="default" bg={props.backgroundColor} className={classes.button} onClick={navigateToUrl} style={{width: '128px', height: '128px'}}>
+        <UnstyledButton variant="default" bg={props.backgroundColor} className={classes.button} onMouseDown={onMouseDown} style={{width: '128px', height: '128px'}}>
             <Flex direction="column" justify='flex-start' align='stretch' gap='sm'>
                 <Flex direction="row" justify='center'>
                     <div style={({width: '64px', height: '64px'})} className={classes.iconContainer}>
@@ -48,9 +48,26 @@ export default function LinkIcon(props: Props): React.ReactNode
     )
 
 
+    function onMouseDown(event: React.MouseEvent)
+    {
+        if ( event.button === 0 )
+        {
+            navigateToUrl();
+        }
+        else if ( event.button === 1 )
+        {
+            navigateToUrlInNewTab()
+        }
+    }
+
     function navigateToUrl()
     {
         window.location.href = props.url
+    }
+
+    function navigateToUrlInNewTab()
+    {
+        window.open(props.url, '_blank')
     }
 
     function determineCaption(): string
