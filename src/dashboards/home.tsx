@@ -17,7 +17,7 @@ import IconScientificAmerican from '@/components/IconScientificAmerican';
 import LinkGroup from '@/components/LinkGroup';
 import LinkIcon from '@/components/LinkIcon';
 import { Flex } from '@mantine/core';
-import { IconBrandAmazon, IconBrandApple, IconBrandAws, IconBrandDisney, IconBrandHbo, IconBrandNetflix, IconBrandReddit, IconBrandYoutube, IconBrandZalando, IconCalendar, IconChess, IconCloud, IconClubs, IconLetterY, IconListCheck, IconMail, IconMovie, IconPencil } from '@tabler/icons-react';
+import { IconBrandAmazon, IconBrandApple, IconBrandAws, IconBrandDisney, IconBrandHbo, IconBrandNetflix, IconBrandReddit, IconBrandYoutube, IconBrandZalando, IconCalendar, IconChess, IconCloud, IconClubs, IconLetterY, IconListCheck, IconMail, IconMap2, IconMovie, IconPencil } from '@tabler/icons-react';
 
 
 interface Props
@@ -35,7 +35,8 @@ export default function HomeDashboard({showShortcuts}: Props): React.ReactNode
                     <LinkIcon url='https://calendar.google.com' backgroundColor='grape' shortcut="c" name='Calendar' icon={IconCalendar} showShortcut={showShortcuts} />
                     <LinkIcon url='https://keep.google.com' backgroundColor='green' shortcut="k" name='Keep' icon={IconPencil} showShortcut={showShortcuts} />
                     <LinkIcon url='https://tasks.google.com' backgroundColor='red' shortcut="t" name='Tasks' icon={IconListCheck} showShortcut={showShortcuts} />
-                    <LinkIcon url='https://drive.google.com/' backgroundColor='gray' shortcut="d" name='Drive' icon={IconCloud} showShortcut={showShortcuts} />
+                    <LinkIcon url='https://drive.google.com/' backgroundColor='rgb(63, 63, 169)' shortcut="d" name='Drive' icon={IconCloud} showShortcut={showShortcuts} />
+                    <LinkIcon url='https://maps.google.com/' backgroundColor='cyan' name='Maps' icon={IconMap2} />
                 </Flex>
             </LinkGroup>
             <LinkGroup caption='Streaming'>

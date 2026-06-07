@@ -11,7 +11,7 @@ import IconScientificAmerican from '@/components/IconScientificAmerican';
 import LinkGroup from '@/components/LinkGroup';
 import LinkIcon from '@/components/LinkIcon';
 import { Flex } from '@mantine/core';
-import { IconBrandReddit, IconCalendar, IconCloud, IconLetterY, IconListCheck, IconMail, IconPencil } from '@tabler/icons-react';
+import { IconBrandReddit, IconCalendar, IconCloud, IconLetterY, IconListCheck, IconMail, IconMap2, IconPencil } from '@tabler/icons-react';
 
 
 interface Props
@@ -30,6 +30,7 @@ export default function WorkDashboard({showShortcuts}: Props): React.ReactNode
                     <LinkIcon url='https://keep.google.com' backgroundColor='green' shortcut="k" name='Keep' icon={IconPencil} showShortcut={showShortcuts} />
                     <LinkIcon url='https://tasks.google.com' backgroundColor='red' shortcut="t" name='Tasks' icon={IconListCheck} showShortcut={showShortcuts} />
                     <LinkIcon url='https://drive.google.com/' backgroundColor='gray' shortcut="d" name='Drive' icon={IconCloud} showShortcut={showShortcuts} />
+                    <LinkIcon url='https://maps.google.com/' backgroundColor='cyan' name='Maps' icon={IconMap2} />
                 </Flex>
             </LinkGroup>
             <LinkGroup caption='Social'>
