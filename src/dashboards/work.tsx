@@ -1,17 +1,11 @@
-import IconArsTechnica from '@/components/IconArsTechnica';
 import IconBitwarden from '@/components/IconBitwarden';
 import IconChatGpt from '@/components/IconChatGpt';
 import IconClaude from '@/components/IconClaude';
-import IconDeStandaard from '@/components/IconDeStandaard';
 import IconGemini from '@/components/IconGemini';
-import IconPhysOrg from '@/components/IconPhysOrg';
-import IconQuantaMagazine from '@/components/IconQuantaMagazine';
-import IconRaindrop from '@/components/IconRaindrop';
-import IconScientificAmerican from '@/components/IconScientificAmerican';
 import LinkGroup from '@/components/LinkGroup';
 import LinkIcon from '@/components/LinkIcon';
 import { Flex } from '@mantine/core';
-import { IconBrandReddit, IconCalendar, IconCloud, IconLetterY, IconListCheck, IconMail, IconMap2, IconPencil } from '@tabler/icons-react';
+import { IconCalendar, IconCloud, IconCloudCode, IconCloudDownload, IconListCheck, IconMail, IconMap2, IconPencil } from '@tabler/icons-react';
 
 
 interface Props
@@ -22,7 +16,7 @@ interface Props
 export default function WorkDashboard({showShortcuts}: Props): React.ReactNode
 {
     return (
-        <Flex gap='1em' justify='space-evenly' wrap='wrap'>
+        <Flex gap='1em' justify='flex-start' wrap='wrap' direction="column" h='90vh'>
             <LinkGroup caption='Google'>
                 <Flex gap='xs'>
                     <LinkIcon url='https://mail.google.com' backgroundColor='blue' shortcut="m" name='Mail' icon={IconMail} showShortcut={showShortcuts} />
@@ -33,17 +27,6 @@ export default function WorkDashboard({showShortcuts}: Props): React.ReactNode
                     <LinkIcon url='https://maps.google.com/' backgroundColor='cyan' name='Maps' icon={IconMap2} />
                 </Flex>
             </LinkGroup>
-            <LinkGroup caption='Social'>
-                <Flex gap='xs'>
-                    <LinkIcon url='https://www.reddit.com/' backgroundColor='#FF5700'  name='Reddit' icon={IconBrandReddit} />
-                    <LinkIcon url='https://www.standaard.be/' backgroundColor='#D90000' name='De Standaard' icon={IconDeStandaard} />
-                    <LinkIcon url='https://news.ycombinator.com/' backgroundColor='#FF5A00' name='Hacker News' icon={IconLetterY} />
-                    <LinkIcon url='https://arstechnica.com/' backgroundColor='white' foregroundColor='black' name='Ars Technica' icon={IconArsTechnica} />
-                    <LinkIcon url='https://www.quantamagazine.org/' backgroundColor='#FFBB00' foregroundColor='black' name='Quantamagazine' icon={IconQuantaMagazine} />
-                    <LinkIcon url='https://www.scientificamerican.com/' backgroundColor='#A4D8EF' foregroundColor='black' name='Scientific American' icon={IconScientificAmerican} />
-                    <LinkIcon url='https://phys.org/' backgroundColor='#999' foregroundColor='black' name='phys.org' icon={IconPhysOrg} />
-                </Flex>
-            </LinkGroup>
             <LinkGroup caption='AI'>
                 <Flex gap='xs'>
                     <LinkIcon url='https://chatgpt.com/' backgroundColor='cyan'  name='ChatGPT' icon={IconChatGpt} />
@@ -51,10 +34,15 @@ export default function WorkDashboard({showShortcuts}: Props): React.ReactNode
                     <LinkIcon url='https://claude.ai/' backgroundColor='#FF0' foregroundColor='black' name='Claude' icon={IconClaude} />
                 </Flex>
             </LinkGroup>
+            <LinkGroup caption='Platform'>
+                <Flex gap='xs'>
+                    <LinkIcon url='https://platform.local.guardsquare.com/' backgroundColor='#005' name='Local' icon={IconCloudDownload} />
+                    <LinkIcon url='https://platform.development.guardsquare.com/' backgroundColor='#55F' name='Development' icon={IconCloudCode} />
+                </Flex>
+            </LinkGroup>
             <LinkGroup caption='Util'>
                 <Flex gap='xs'>
                     <LinkIcon url='https://vault.bitwarden.com/' backgroundColor='#005'  name='Bitwarden' icon={IconBitwarden} shortcut='b' showShortcut={showShortcuts} />
-                    <LinkIcon url='https://app.raindrop.io/my/0' backgroundColor='white' foregroundColor='black' name='Raindrop' icon={IconRaindrop} shortcut='r' showShortcut={showShortcuts} />
                 </Flex>
             </LinkGroup>
        </Flex>
