@@ -5,7 +5,7 @@ import IconGemini from '@/components/IconGemini';
 import LinkGroup from '@/components/LinkGroup';
 import LinkIcon from '@/components/LinkIcon';
 import { Flex } from '@mantine/core';
-import { IconCalendar, IconCloud, IconCloudCode, IconCloudDownload, IconListCheck, IconMail, IconMap2, IconPencil } from '@tabler/icons-react';
+import { IconCalendar, IconCloud, IconCloudCode, IconCloudDownload, IconEye, IconListCheck, IconMail, IconMap2, IconPencil, IconRun } from '@tabler/icons-react';
 
 
 interface Props
@@ -34,10 +34,12 @@ export default function WorkDashboard({showShortcuts}: Props): React.ReactNode
                     <LinkIcon url='https://claude.ai/' backgroundColor='#FF0' foregroundColor='black' name='Claude' icon={IconClaude} />
                 </Flex>
             </LinkGroup>
-            <LinkGroup caption='Platform'>
+            <LinkGroup caption='Guardsquare'>
                 <Flex gap='xs'>
-                    <LinkIcon url='https://platform.local.guardsquare.com/' backgroundColor='#005' name='Local' icon={IconCloudDownload} />
-                    <LinkIcon url='https://platform.development.guardsquare.com/' backgroundColor='#55F' name='Development' icon={IconCloudCode} />
+                    <LinkIcon url='https://phabricator.guardsquare.com/' backgroundColor='#005' name='Phabricator' icon={IconEye} />
+                    <LinkIcon url='go/sigma' backgroundColor='red' name='Current sprint' icon={IconRun} shortcut='s' showShortcut={showShortcuts} />
+                    <LinkIcon url='https://platform.local.guardsquare.com/' backgroundColor='#005' name='Local Platform' icon={IconCloudDownload} />
+                    <LinkIcon url='https://platform.development.guardsquare.com/' backgroundColor='#55F' name='Dev Platform' icon={IconCloudCode} />
                 </Flex>
             </LinkGroup>
             <LinkGroup caption='Util'>
