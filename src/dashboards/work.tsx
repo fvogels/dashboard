@@ -27,23 +27,17 @@ export default function WorkDashboard({showShortcuts}: Props): React.ReactNode
                     <LinkIcon url='https://maps.google.com/' backgroundColor='cyan' name='Maps' icon={IconMap2} />
                 </Flex>
             </LinkGroup>
-            <LinkGroup caption='AI'>
-                <Flex gap='xs'>
-                    <LinkIcon url='https://chatgpt.com/' backgroundColor='cyan'  name='ChatGPT' icon={IconChatGpt} />
-                    <LinkIcon url='https://gemini.google.com/' backgroundColor='white' foregroundColor='black' name='Gemini' icon={IconGemini} />
-                    <LinkIcon url='https://claude.ai/' backgroundColor='#FF0' foregroundColor='black' name='Claude' icon={IconClaude} />
-                </Flex>
-            </LinkGroup>
             <LinkGroup caption='Guardsquare'>
                 <Flex gap='xs'>
                     <LinkIcon url='https://phabricator.guardsquare.com/' backgroundColor='#005' name='Phabricator' icon={IconEye} />
-                    <LinkIcon url='go/sigma' backgroundColor='red' name='Current sprint' icon={IconRun} shortcut='s' showShortcut={showShortcuts} />
+                    <LinkIcon url='https://go.tailf31e4.ts.net/sigma' backgroundColor='red' name='Current sprint' icon={IconRun} shortcut='s' showShortcut={showShortcuts} />
                     <LinkIcon url='https://platform.local.guardsquare.com/' backgroundColor='#005' name='Local Platform' icon={IconCloudDownload} />
                     <LinkIcon url='https://platform.development.guardsquare.com/' backgroundColor='#55F' name='Dev Platform' icon={IconCloudCode} />
                 </Flex>
             </LinkGroup>
             <LinkGroup caption='Util'>
                 <Flex gap='xs'>
+                    <LinkIcon url='https://gemini.google.com/' backgroundColor='white' foregroundColor='black' name='Gemini' icon={IconGemini} shortcut='g' showShortcut={showShortcuts} />
                     <LinkIcon url='https://vault.bitwarden.com/' backgroundColor='#005'  name='Bitwarden' icon={IconBitwarden} shortcut='b' showShortcut={showShortcuts} />
                 </Flex>
             </LinkGroup>
