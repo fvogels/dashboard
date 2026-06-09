@@ -5,7 +5,7 @@ import IconGemini from '@/components/IconGemini';
 import LinkGroup from '@/components/LinkGroup';
 import LinkIcon from '@/components/LinkIcon';
 import { Flex } from '@mantine/core';
-import { IconCalendar, IconCloud, IconCloudCode, IconCloudDownload, IconEye, IconListCheck, IconMail, IconMap2, IconPencil, IconRun } from '@tabler/icons-react';
+import { IconBrandGoogleDrive, IconBrandGoogleMaps, IconCalendar, IconCloud, IconCloudCode, IconCloudDownload, IconEye, IconListCheck, IconMail, IconMap2, IconPencil, IconRun } from '@tabler/icons-react';
 
 
 interface Props
@@ -23,8 +23,9 @@ export default function WorkDashboard({showShortcuts}: Props): React.ReactNode
                     <LinkIcon url='https://calendar.google.com' backgroundColor='grape' shortcut="c" name='Calendar' icon={IconCalendar} showShortcut={showShortcuts} />
                     <LinkIcon url='https://keep.google.com' backgroundColor='green' shortcut="k" name='Keep' icon={IconPencil} showShortcut={showShortcuts} />
                     <LinkIcon url='https://tasks.google.com' backgroundColor='red' shortcut="t" name='Tasks' icon={IconListCheck} showShortcut={showShortcuts} />
-                    <LinkIcon url='https://drive.google.com/' backgroundColor='gray' shortcut="d" name='Drive' icon={IconCloud} showShortcut={showShortcuts} />
-                    <LinkIcon url='https://maps.google.com/' backgroundColor='cyan' name='Maps' icon={IconMap2} />
+                    <LinkIcon url='https://drive.google.com/' backgroundColor='gray' shortcut="d" name='Drive' icon={IconBrandGoogleDrive} showShortcut={showShortcuts} />
+                    <LinkIcon url='https://maps.google.com/' backgroundColor='cyan' name='Maps' icon={IconBrandGoogleMaps} />
+                    <LinkIcon url='https://console.cloud.google.com/' backgroundColor='#AAA' name='Cloud' icon={IconCloud} foregroundColor='black' shortcut='w' showShortcut={showShortcuts} />
                 </Flex>
             </LinkGroup>
             <LinkGroup caption='Guardsquare'>
