@@ -3,7 +3,7 @@ import IconGemini from '@/components/IconGemini';
 import LinkGroup from '@/components/LinkGroup';
 import LinkIcon from '@/components/LinkIcon';
 import { Flex } from '@mantine/core';
-import { IconBrandGoogleDrive, IconBrandGoogleMaps, IconCalendar, IconCloud, IconCloudCode, IconCloudComputing, IconCloudDownload, IconEye, IconListCheck, IconMail, IconPencil, IconRun } from '@tabler/icons-react';
+import { IconBrandFigma, IconBrandGoogleDrive, IconBrandGoogleMaps, IconCalendar, IconCloud, IconCloudCode, IconCloudComputing, IconCloudDownload, IconEye, IconListCheck, IconMail, IconPencil, IconRun } from '@tabler/icons-react';
 
 
 interface Props
@@ -32,6 +32,7 @@ export default function WorkDashboard({showShortcuts}: Props): React.ReactNode
                     <LinkIcon url='https://go.tailf31e4.ts.net/sigma' backgroundColor='red' name='Current sprint' icon={IconRun} shortcut='s' showShortcut={showShortcuts} />
                     <LinkIcon url='https://platform.local.guardsquare.com/' backgroundColor='#005' name='Local Platform' icon={IconCloudDownload} />
                     <LinkIcon url='https://platform.development.guardsquare.com/' backgroundColor='#55F' name='Dev Platform' icon={IconCloudCode} />
+                    <LinkIcon url='https://www.figma.com/' backgroundColor='#AA0' foregroundColor='black' name='Figma' icon={IconBrandFigma} />
                     <LinkIcon url='https://guardsquare.lightning.force.com/' backgroundColor='white' foregroundColor='black' name='Salesforce' icon={IconCloudComputing} />
                 </Flex>
             </LinkGroup>
