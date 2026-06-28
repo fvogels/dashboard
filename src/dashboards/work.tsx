@@ -3,7 +3,7 @@ import IconGemini from '@/components/IconGemini';
 import LinkGroup from '@/components/LinkGroup';
 import LinkIcon from '@/components/LinkIcon';
 import { Flex } from '@mantine/core';
-import { IconBrandFigma, IconBrandGoogleDrive, IconBrandGoogleMaps, IconCalendar, IconCloud, IconCloudCode, IconCloudComputing, IconCloudDownload, IconDeviceMobileSearch, IconEye, IconListCheck, IconMail, IconPencil, IconRun } from '@tabler/icons-react';
+import { IconBrandFigma, IconBrandGoogleDrive, IconBrandGoogleMaps, IconCalendar, IconCloud, IconCloudCode, IconCloudComputing, IconCloudDownload, IconDeviceMobileSearch, IconEye, IconEyePause, IconListCheck, IconMail, IconPencil, IconRun } from '@tabler/icons-react';
 
 
 interface Props
@@ -40,6 +40,7 @@ export default function WorkDashboard({showShortcuts}: Props): React.ReactNode
                 <Flex gap='xs'>
                     <LinkIcon url='https://gemini.google.com/' backgroundColor='white' foregroundColor='black' name='Gemini' icon={IconGemini} shortcut='g' showShortcut={showShortcuts} />
                     <LinkIcon url='https://vault.bitwarden.com/' backgroundColor='#005'  name='Bitwarden' icon={IconBitwarden} shortcut='b' showShortcut={showShortcuts} />
+                    <LinkIcon url='https://trace.playwright.dev/' backgroundColor='#805'  name='Playwright Trace Viewer' icon={IconEyePause} shortcut='p' showShortcut={showShortcuts} />
                     <LinkIcon url='https://inspector.appiumpro.com/' backgroundColor='#805'  name='Appium Inspector' icon={IconDeviceMobileSearch} shortcut='a' showShortcut={showShortcuts} />
                 </Flex>
             </LinkGroup>
