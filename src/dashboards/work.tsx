@@ -40,8 +40,8 @@ export default function WorkDashboard({showShortcuts}: Props): React.ReactNode
                 <Flex gap='xs'>
                     <LinkIcon url='https://gemini.google.com/' backgroundColor='white' foregroundColor='black' name='Gemini' icon={IconGemini} shortcut='g' showShortcut={showShortcuts} />
                     <LinkIcon url='https://vault.bitwarden.com/' backgroundColor='#005'  name='Bitwarden' icon={IconBitwarden} shortcut='b' showShortcut={showShortcuts} />
-                    <LinkIcon url='https://trace.playwright.dev/' backgroundColor='#805'  name='Playwright Trace Viewer' icon={IconEyePause} shortcut='p' showShortcut={showShortcuts} />
-                    <LinkIcon url='https://inspector.appiumpro.com/' backgroundColor='#805'  name='Appium Inspector' icon={IconDeviceMobileSearch} shortcut='a' showShortcut={showShortcuts} />
+                    <LinkIcon url='https://trace.playwright.dev/' backgroundColor='rgb(10, 182, 151)' foregroundColor='black'  name='Playwright Trace Viewer' icon={IconEyePause} shortcut='p' showShortcut={showShortcuts} />
+                    <LinkIcon url='https://inspector.appiumpro.com/' backgroundColor='#805' name='Appium Inspector' icon={IconDeviceMobileSearch} shortcut='a' showShortcut={showShortcuts} />
                 </Flex>
             </LinkGroup>
        </Flex>
