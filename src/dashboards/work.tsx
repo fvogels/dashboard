@@ -29,7 +29,7 @@ export default function WorkDashboard({showShortcuts}: Props): React.ReactNode
             <LinkGroup caption='Guardsquare'>
                 <Flex gap='xs'>
                     <LinkIcon url='https://phabricator.guardsquare.com/' backgroundColor='#005' name='Fabricateur' shortcut="f" showShortcut={showShortcuts} icon={IconEye} />
-                    <LinkIcon url='https://go.tailf31e4.ts.net/sigma' backgroundColor='red' name='Current sprint' icon={IconRun} shortcut='s' showShortcut={showShortcuts} />
+                    <LinkIcon url='https://phabricator.guardsquare.com/project/profile/1697/' backgroundColor='red' name='Current sprint' icon={IconRun} shortcut='s' showShortcut={showShortcuts} />
                     <LinkIcon url='https://platform.local.guardsquare.com/' backgroundColor='#005' name='Local Platform' icon={IconCloudDownload} />
                     <LinkIcon url='https://platform.development.guardsquare.com/' backgroundColor='#55F' name='Dev Platform' icon={IconCloudCode} />
                     <LinkIcon url='https://www.figma.com/' backgroundColor='#AA0' foregroundColor='black' name='Figma' icon={IconBrandFigma} />
