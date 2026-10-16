@@ -33,7 +33,7 @@ export default function WorkDashboard({showShortcuts}: Props): React.ReactNode
                     <LinkIcon url='https://redash.guardsquare.com/queries/new' backgroundColor='orange' name='Redash' icon={IconChartBarPopular} shortcut='r' showShortcut={showShortcuts} />
                     <LinkIcon url='https://platform.local.guardsquare.com/' backgroundColor='#005' name='Local Platform' icon={IconCloudDownload} />
                     <LinkIcon url='https://platform.development.guardsquare.com/' backgroundColor='#55F' name='Dev Platform' icon={IconCloudCode} />
-                    <LinkIcon url='https://platform.taging.guardsquare.com/' backgroundColor='#33F' name='Staging Platform' icon={IconCloudCode} />
+                    <LinkIcon url='https://platform.staging.guardsquare.com/' backgroundColor='#33F' name='Staging Platform' icon={IconCloudCode} />
                     <LinkIcon url='https://www.figma.com/' backgroundColor='#AA0' foregroundColor='black' name='Figma' icon={IconBrandFigma} />
                     <LinkIcon url='https://guardsquare.lightning.force.com/' backgroundColor='white' foregroundColor='black' name='Salesforce' icon={IconCloudComputing} />
                 </Flex>
