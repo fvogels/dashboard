@@ -1,17 +1,9 @@
-import IconArsTechnica from '@/components/IconArsTechnica';
 import IconBitwarden from '@/components/IconBitwarden';
-import IconChatGpt from '@/components/IconChatGpt';
-import IconClaude from '@/components/IconClaude';
-import IconDeStandaard from '@/components/IconDeStandaard';
 import IconGemini from '@/components/IconGemini';
-import IconPhysOrg from '@/components/IconPhysOrg';
-import IconQuantaMagazine from '@/components/IconQuantaMagazine';
-import IconRaindrop from '@/components/IconRaindrop';
-import IconScientificAmerican from '@/components/IconScientificAmerican';
 import LinkGroup from '@/components/LinkGroup';
 import LinkIcon from '@/components/LinkIcon';
 import { Flex } from '@mantine/core';
-import { IconBrandReddit, IconCalendar, IconCloud, IconLetterY, IconListCheck, IconMail, IconMap2, IconPencil } from '@tabler/icons-react';
+import { IconAiAgent, IconBrandFigma, IconBrandGoogleDrive, IconBrandGoogleMaps, IconCalendar, IconChartBarPopular, IconCloud, IconCloudCode, IconCloudComputing, IconCloudDownload, IconDeviceMobileSearch, IconEye, IconEyePause, IconListCheck, IconMail, IconPencil, IconRun } from '@tabler/icons-react';
 
 
 interface Props
@@ -22,39 +14,36 @@ interface Props
 export default function WorkDashboard({showShortcuts}: Props): React.ReactNode
 {
     return (
-        <Flex gap='1em' justify='space-evenly' wrap='wrap'>
+        <Flex gap='1em' justify='flex-start' wrap='wrap' direction="column" h='90vh'>
             <LinkGroup caption='Google'>
                 <Flex gap='xs'>
                     <LinkIcon url='https://mail.google.com' backgroundColor='blue' shortcut="m" name='Mail' icon={IconMail} showShortcut={showShortcuts} />
                     <LinkIcon url='https://calendar.google.com' backgroundColor='grape' shortcut="c" name='Calendar' icon={IconCalendar} showShortcut={showShortcuts} />
                     <LinkIcon url='https://keep.google.com' backgroundColor='green' shortcut="k" name='Keep' icon={IconPencil} showShortcut={showShortcuts} />
                     <LinkIcon url='https://tasks.google.com' backgroundColor='red' shortcut="t" name='Tasks' icon={IconListCheck} showShortcut={showShortcuts} />
-                    <LinkIcon url='https://drive.google.com/' backgroundColor='gray' shortcut="d" name='Drive' icon={IconCloud} showShortcut={showShortcuts} />
-                    <LinkIcon url='https://maps.google.com/' backgroundColor='cyan' name='Maps' icon={IconMap2} />
+                    <LinkIcon url='https://drive.google.com/' backgroundColor='gray' shortcut="d" name='Drive' icon={IconBrandGoogleDrive} showShortcut={showShortcuts} />
+                    <LinkIcon url='https://maps.google.com/' backgroundColor='cyan' name='Maps' icon={IconBrandGoogleMaps} />
+                    <LinkIcon url='https://console.cloud.google.com/' backgroundColor='#AAA' name='Cloud' icon={IconCloud} foregroundColor='black' shortcut='w' showShortcut={showShortcuts} />
                 </Flex>
             </LinkGroup>
-            <LinkGroup caption='Social'>
+            <LinkGroup caption='Guardsquare'>
                 <Flex gap='xs'>
-                    <LinkIcon url='https://www.reddit.com/' backgroundColor='#FF5700'  name='Reddit' icon={IconBrandReddit} />
-                    <LinkIcon url='https://www.standaard.be/' backgroundColor='#D90000' name='De Standaard' icon={IconDeStandaard} />
-                    <LinkIcon url='https://news.ycombinator.com/' backgroundColor='#FF5A00' name='Hacker News' icon={IconLetterY} />
-                    <LinkIcon url='https://arstechnica.com/' backgroundColor='white' foregroundColor='black' name='Ars Technica' icon={IconArsTechnica} />
-                    <LinkIcon url='https://www.quantamagazine.org/' backgroundColor='#FFBB00' foregroundColor='black' name='Quantamagazine' icon={IconQuantaMagazine} />
-                    <LinkIcon url='https://www.scientificamerican.com/' backgroundColor='#A4D8EF' foregroundColor='black' name='Scientific American' icon={IconScientificAmerican} />
-                    <LinkIcon url='https://phys.org/' backgroundColor='#999' foregroundColor='black' name='phys.org' icon={IconPhysOrg} />
-                </Flex>
-            </LinkGroup>
-            <LinkGroup caption='AI'>
-                <Flex gap='xs'>
-                    <LinkIcon url='https://chatgpt.com/' backgroundColor='cyan'  name='ChatGPT' icon={IconChatGpt} />
-                    <LinkIcon url='https://gemini.google.com/' backgroundColor='white' foregroundColor='black' name='Gemini' icon={IconGemini} />
-                    <LinkIcon url='https://claude.ai/' backgroundColor='#FF0' foregroundColor='black' name='Claude' icon={IconClaude} />
+                    <LinkIcon url='https://phabricator.guardsquare.com/differential/' backgroundColor='#005' name='Fabricateur' shortcut="f" showShortcut={showShortcuts} icon={IconEye} />
+                    <LinkIcon url='https://phabricator.guardsquare.com/project/profile/1697/' backgroundColor='black' name='Current sprint' icon={IconRun} shortcut='s' showShortcut={showShortcuts} />
+                    <LinkIcon url='https://redash.guardsquare.com/queries/new' backgroundColor='orange' name='Redash' icon={IconChartBarPopular} shortcut='r' showShortcut={showShortcuts} />
+                    <LinkIcon url='https://platform.local.guardsquare.com/' backgroundColor='#005' name='Local Platform' icon={IconCloudDownload} />
+                    <LinkIcon url='https://platform.development.guardsquare.com/' backgroundColor='#55F' name='Dev Platform' icon={IconCloudCode} />
+                    <LinkIcon url='https://platform.taging.guardsquare.com/' backgroundColor='#33F' name='Staging Platform' icon={IconCloudCode} />
+                    <LinkIcon url='https://www.figma.com/' backgroundColor='#AA0' foregroundColor='black' name='Figma' icon={IconBrandFigma} />
+                    <LinkIcon url='https://guardsquare.lightning.force.com/' backgroundColor='white' foregroundColor='black' name='Salesforce' icon={IconCloudComputing} />
                 </Flex>
             </LinkGroup>
             <LinkGroup caption='Util'>
                 <Flex gap='xs'>
+                    <LinkIcon url='https://gemini.google.com/' backgroundColor='white' foregroundColor='black' name='Gemini' icon={IconGemini} shortcut='g' showShortcut={showShortcuts} />
+                    <LinkIcon url='https://ai.tailf31e4.ts.net/chat' backgroundColor='#805' name='AI' icon={IconAiAgent} shortcut='a' showShortcut={showShortcuts} />
                     <LinkIcon url='https://vault.bitwarden.com/' backgroundColor='#005'  name='Bitwarden' icon={IconBitwarden} shortcut='b' showShortcut={showShortcuts} />
-                    <LinkIcon url='https://app.raindrop.io/my/0' backgroundColor='white' foregroundColor='black' name='Raindrop' icon={IconRaindrop} shortcut='r' showShortcut={showShortcuts} />
+                    <LinkIcon url='https://trace.playwright.dev/' backgroundColor='rgb(10, 182, 151)' foregroundColor='black'  name='Playwright Trace Viewer' icon={IconEyePause} shortcut='p' showShortcut={showShortcuts} />
                 </Flex>
             </LinkGroup>
        </Flex>
