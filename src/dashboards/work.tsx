@@ -37,23 +37,22 @@ export default function WorkDashboard({showShortcuts}: Props): React.ReactNode
             </LinkGroup>
             <LinkGroup caption='Guardsquare Platform'>
                 <Flex gap='xs'>
-                    <LinkIcon url='https://platform.local.guardsquare.com/' backgroundColor='#005' name='Local Platform' icon={IconCloudFog} />
-                    <LinkIcon url='https://platform.development.guardsquare.com/' backgroundColor='#55F' name='Dev Platform' icon={IconCloudFog} />
-                    <LinkIcon url='https://platform.staging.guardsquare.com/' backgroundColor='#33F' name='Staging Platform' icon={IconCloudFog} />
-                    <LinkIcon url='https://platform.guardsquare.com/' backgroundColor='#33F' name='Production Platform' icon={IconCloudCode} />
+                    <LinkIcon url='https://platform.local.guardsquare.com/' backgroundColor='#005' name='Local' icon={IconCloudFog} />
+                    <LinkIcon url='https://platform.development.guardsquare.com/' backgroundColor='#22F' name='Dev' icon={IconCloudFog} />
+                    <LinkIcon url='https://platform.staging.guardsquare.com/' backgroundColor='#44F' name='Staging' icon={IconCloudFog} />
+                    <LinkIcon url='https://platform.guardsquare.com/' backgroundColor='#66F' name='Production' icon={IconCloudFog} />
                 </Flex>
             </LinkGroup>
             <LinkGroup caption='Guardsquare Admin'>
                 <Flex gap='xs'>
-                    <LinkIcon url='https://admin.local.guardsquare.com/' backgroundColor='#005' name='Local Admin' icon={IconUserShield} />
-                    <LinkIcon url='https://admin.development.guardsquare.com/' backgroundColor='#55F' name='Dev Admin' icon={IconUserShield} />
-                    <LinkIcon url='https://admin.staging.guardsquare.com/' backgroundColor='#33F' name='Staging Admin' icon={IconUserShield} />
-                    <LinkIcon url='https://admin.guardsquare.com/' backgroundColor='#33F' name='Production Admin' icon={IconUserShield} />
+                    <LinkIcon url='https://admin.local.guardsquare.com/' backgroundColor='#005' name='Local' icon={IconUserShield} />
+                    <LinkIcon url='https://admin.development.guardsquare.com/' backgroundColor='#22F' name='Dev' icon={IconUserShield} />
+                    <LinkIcon url='https://admin.staging.guardsquare.com/' backgroundColor='#44F' name='Staging' icon={IconUserShield} />
+                    <LinkIcon url='https://admin.guardsquare.com/' backgroundColor='#66F' name='Production' icon={IconUserShield} />
                 </Flex>
             </LinkGroup>
             <LinkGroup caption='Util'>
                 <Flex gap='xs'>
-                    <LinkIcon url='https://gemini.google.com/' backgroundColor='white' foregroundColor='black' name='Gemini' icon={IconGemini} shortcut='g' showShortcut={showShortcuts} />
                     <LinkIcon url='https://ai.tailf31e4.ts.net/chat' backgroundColor='#805' name='AI' icon={IconAiAgent} shortcut='a' showShortcut={showShortcuts} />
                     <LinkIcon url='https://vault.bitwarden.com/' backgroundColor='#005'  name='Bitwarden' icon={IconBitwarden} shortcut='b' showShortcut={showShortcuts} />
                     <LinkIcon url='https://trace.playwright.dev/' backgroundColor='rgb(10, 182, 151)' foregroundColor='black'  name='Playwright Trace Viewer' icon={IconEyePause} shortcut='p' showShortcut={showShortcuts} />
