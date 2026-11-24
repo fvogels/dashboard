@@ -3,7 +3,7 @@ import IconGemini from '@/components/IconGemini';
 import LinkGroup from '@/components/LinkGroup';
 import LinkIcon from '@/components/LinkIcon';
 import { Flex } from '@mantine/core';
-import { IconAiAgent, IconBrandFigma, IconBrandGoogleDrive, IconBrandGoogleMaps, IconCalendar, IconChartBarPopular, IconCloud, IconCloudCode, IconCloudComputing, IconCloudDownload, IconDeviceMobileSearch, IconEye, IconEyePause, IconListCheck, IconMail, IconPencil, IconRun } from '@tabler/icons-react';
+import { IconAiAgent, IconBrandFigma, IconBrandGoogleDrive, IconBrandGoogleMaps, IconCalendar, IconChartBarPopular, IconCloud, IconCloudCode, IconCloudComputing, IconCloudDownload, IconCloudFog, IconDeviceMobileSearch, IconEye, IconEyePause, IconListCheck, IconMail, IconPencil, IconRun, IconUserShield } from '@tabler/icons-react';
 
 
 interface Props
@@ -31,11 +31,24 @@ export default function WorkDashboard({showShortcuts}: Props): React.ReactNode
                     <LinkIcon url='https://phabricator.guardsquare.com/differential/' backgroundColor='#005' name='Fabricateur' shortcut="f" showShortcut={showShortcuts} icon={IconEye} />
                     <LinkIcon url='https://phabricator.guardsquare.com/project/profile/1697/' backgroundColor='black' name='Current sprint' icon={IconRun} shortcut='s' showShortcut={showShortcuts} />
                     <LinkIcon url='https://redash.guardsquare.com/queries/new' backgroundColor='orange' name='Redash' icon={IconChartBarPopular} shortcut='r' showShortcut={showShortcuts} />
-                    <LinkIcon url='https://platform.local.guardsquare.com/' backgroundColor='#005' name='Local Platform' icon={IconCloudDownload} />
-                    <LinkIcon url='https://platform.development.guardsquare.com/' backgroundColor='#55F' name='Dev Platform' icon={IconCloudCode} />
-                    <LinkIcon url='https://platform.staging.guardsquare.com/' backgroundColor='#33F' name='Staging Platform' icon={IconCloudCode} />
                     <LinkIcon url='https://www.figma.com/' backgroundColor='#AA0' foregroundColor='black' name='Figma' icon={IconBrandFigma} />
                     <LinkIcon url='https://guardsquare.lightning.force.com/' backgroundColor='white' foregroundColor='black' name='Salesforce' icon={IconCloudComputing} />
+                </Flex>
+            </LinkGroup>
+            <LinkGroup caption='Guardsquare Platform'>
+                <Flex gap='xs'>
+                    <LinkIcon url='https://platform.local.guardsquare.com/' backgroundColor='#005' name='Local Platform' icon={IconCloudFog} />
+                    <LinkIcon url='https://platform.development.guardsquare.com/' backgroundColor='#55F' name='Dev Platform' icon={IconCloudFog} />
+                    <LinkIcon url='https://platform.staging.guardsquare.com/' backgroundColor='#33F' name='Staging Platform' icon={IconCloudFog} />
+                    <LinkIcon url='https://platform.guardsquare.com/' backgroundColor='#33F' name='Production Platform' icon={IconCloudCode} />
+                </Flex>
+            </LinkGroup>
+            <LinkGroup caption='Guardsquare Admin'>
+                <Flex gap='xs'>
+                    <LinkIcon url='https://admin.local.guardsquare.com/' backgroundColor='#005' name='Local Admin' icon={IconUserShield} />
+                    <LinkIcon url='https://admin.development.guardsquare.com/' backgroundColor='#55F' name='Dev Admin' icon={IconUserShield} />
+                    <LinkIcon url='https://admin.staging.guardsquare.com/' backgroundColor='#33F' name='Staging Admin' icon={IconUserShield} />
+                    <LinkIcon url='https://admin.guardsquare.com/' backgroundColor='#33F' name='Production Admin' icon={IconUserShield} />
                 </Flex>
             </LinkGroup>
             <LinkGroup caption='Util'>
